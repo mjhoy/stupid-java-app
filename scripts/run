@@ -1,0 +1,7 @@
+#!/bin/bash
+
+MVN=${MVN:-mvn}
+
+set -eoux pipefail
+
+$MVN package && $MVN exec:java -D exec.mainClass=bike.mikey.Main
